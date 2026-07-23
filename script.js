@@ -9,71 +9,49 @@ const projectModal = document.getElementById("projectModal");
 const galleryModal = document.getElementById("galleryModal");
 
 const projectData = {
-  "cleaning-stock": {
-    category: "Inventory Management",
-    year: "2026",
-    title: "Cleaning Stock Management System",
-    image: "assets/projects/cleaning-stock-dashboard.webp",
-    summary: "An internal inventory system for managing cleaning-material availability and transaction flows in a more structured, transparent, and traceable way.",
-    challenge: "Stock, request, and movement data was fragmented, making it difficult to identify actual quantities, critical items, and transaction history quickly.",
-    solution: "Built an integrated dashboard covering item masters, requests, incoming and outgoing goods, stock status, monthly reports, item details, and user management.",
-    impact: "Improved stock visibility, supported replenishment prioritization, and simplified transaction tracking and data accountability.",
-    stack: ["PHP", "MySQL", "JavaScript", "HTML/CSS", "Responsive UI"]
-  },
   "production-dashboard": {
-    category: "KPI & Production Reporting",
+    category: "Production Analytics",
     year: "2026",
     title: "Production & Leader Dashboard",
     image: "assets/projects/production-dashboard.png",
-    summary: "An operational dashboard that helps production leaders assess daily conditions from targets to line performance, supported by a cross-functional dashboard gallery.",
-    challenge: "Output, target, WIP, rework, loss-time, and quality information needed to be interpreted quickly so abnormalities could be addressed immediately.",
-    solution: "Combined key indicators, hourly production timelines, line and date filters, public dashboards, and cross-functional views such as PPIC, repair, IPQC, and OQC into one monitoring ecosystem.",
-    impact: "Accelerated assessment of current conditions, clarified gaps against targets, and supported daily cross-team communication through consistent data views.",
-    stack: ["PHP", "MySQL", "JavaScript", "KPI Design", "Data Visualization", "Cross-Function Dashboard"]
+    summary: "A focused operational dashboard for reviewing production status and line performance.",
+    challenge: "Targets, hourly output, WIP, rework, and loss-time data were spread across different views.",
+    solution: "Combined the main production indicators, filters, and timelines in one consistent dashboard.",
+    impact: "Made line conditions easier to review and supported faster daily coordination.",
+    stack: ["PHP", "MySQL", "JavaScript", "KPI Design", "Data Visualization"]
   },
   "work-instruction": {
     category: "Digital Standardization",
     year: "2026",
     title: "Digital Work Instruction System",
     image: "assets/projects/work-instruction-system.png",
-    summary: "A digital work instruction system designed to maintain method consistency, visual clarity, and production-process revision control.",
-    challenge: "Work instructions needed to be easy to create, update, trace, and understand without losing document structure or quality standards.",
-    solution: "Structured product families, models, processes, stations, work steps, visual media, tools, specifications, cycle time, and revision workflows in one system.",
-    impact: "Supported process standardization, accelerated access to work information, and improved document-change traceability.",
-    stack: ["PHP", "MySQL", "Document Workflow", "Visual Instruction", "Responsive Web"]
+    summary: "A structured system for creating, updating, and tracing production work instructions.",
+    challenge: "Process steps, visuals, standards, and revisions needed clearer control.",
+    solution: "Organized instructions by product, model, process, station, work step, visual, tool, and cycle time.",
+    impact: "Improved access to standards and simplified document revision tracking.",
+    stack: ["PHP", "MySQL", "Document Workflow", "Responsive Web"]
   },
-  "production-kpi": {
-    category: "Performance Management",
+  "cleaning-stock": {
+    category: "Inventory Control",
     year: "2026",
-    title: "Production KPI Dashboard",
-    image: "assets/projects/production-kpi-dashboard.webp",
-    summary: "A management-level dashboard presenting operational health, performance trends, achievement, and areas requiring attention.",
-    challenge: "Monthly KPI data needed to be translated into concise visuals so trends, gaps, and improvement priorities could be understood quickly.",
-    solution: "Designed an operational health index, focus-area scores, monthly trends, achievement summaries, and top issues in an executive layout.",
-    impact: "Enabled more consistent performance reviews, simplified priority setting, and improved data communication with stakeholders.",
-    stack: ["KPI Framework", "Data Analysis", "Dashboard UI", "Excel/SQL", "Management Reporting"]
+    title: "Cleaning Stock Management System",
+    image: "assets/projects/cleaning-stock-dashboard.webp",
+    summary: "An internal system for managing cleaning-material stock and transaction flow.",
+    challenge: "Stock, requests, and movement history were difficult to monitor consistently.",
+    solution: "Connected item masters, requests, incoming and outgoing goods, alerts, and reports.",
+    impact: "Improved stock visibility and transaction traceability.",
+    stack: ["PHP", "MySQL", "JavaScript", "Inventory System"]
   },
-  maintenance: {
-    category: "Maintenance Management",
+  "clone-scanner": {
+    category: "Production Automation",
     year: "2026",
-    title: "Maintenance Summary Dashboard",
-    image: "assets/projects/maintenance-dashboard.png",
-    summary: "A monitoring dashboard for controlling maintenance activities and making follow-up work more visible.",
-    challenge: "Maintenance projects, inspection results, equipment condition, work evidence, and operational needs had to be monitored across multiple sources.",
-    solution: "Unified project tracking, inspection status, equipment health, evidence availability, and supporting information in one dashboard.",
-    impact: "Improved visibility of open work, simplified follow-up, and helped teams maintain facility and equipment readiness.",
-    stack: ["PHP", "MySQL", "Project Tracking", "Inspection", "Dashboard Design"]
-  },
-  "mp-cost": {
-    category: "Cost Analytics",
-    year: "2026",
-    title: "Manpower Cost Dashboard",
-    image: "assets/projects/mp-cost-dashboard.webp",
-    summary: "An analytical dashboard connecting labor cost with production output and cost per unit.",
-    challenge: "Cost changes needed to be evaluated alongside output so the analysis would not stop at total cost without productivity context.",
-    solution: "Presented output trends, total manpower cost, cost per unit, actual versus target, and identification of the best and worst periods.",
-    impact: "Supported more objective cost-efficiency analysis and helped identify periods or areas requiring deeper investigation.",
-    stack: ["Cost Analysis", "Production Data", "KPI Dashboard", "Excel/SQL", "Data Visualization"]
+    title: "Clone Scanner — SSD / NVMe Detector",
+    image: "assets/projects/gallery/clone-scanner-dashboard.jpg",
+    summary: "A desktop utility for validating storage and system information after the cloning process.",
+    challenge: "Multiple validation points had to be checked manually and recorded consistently.",
+    solution: "Automated storage detection and checks for serial number, firmware, health, capacity, and Windows build.",
+    impact: "Reduced repetitive checking and improved validation consistency.",
+    stack: ["Desktop Utility", "Automation", "Hardware Detection", "Database Logging"]
   }
 };
 

@@ -1,6 +1,17 @@
 # Abdul Kholik Portfolio
 
-A responsive static portfolio for Manufacturing Process Engineering, process improvement, production analytics, digital manufacturing, and internal system development.
+A concise, responsive portfolio for a Staff Process Engineer focused on process improvement, production analytics, automation, and manufacturing digitalization.
+
+## Main sections
+
+- Profile
+- What I Deliver
+- Featured Projects
+- Career Journey
+- Tools & Expertise
+- Contact
+
+The project archive is collapsed by default so the main page stays focused while additional manufacturing dashboards remain available.
 
 ## Run locally
 
@@ -14,7 +25,7 @@ Then open `http://localhost:8000`.
 
 ## Deploy to GitHub Pages
 
-1. Upload the entire contents of this folder to the `abdul-kholik-portfolio` repository.
+1. Upload the contents of this folder to the `abdul-kholik-portfolio` repository.
 2. Open **Settings → Pages**.
 3. Select **Deploy from a branch**.
 4. Select the `main` branch and the `/root` folder.
@@ -22,11 +33,11 @@ Then open `http://localhost:8000`.
 
 ## Structure
 
-- `index.html` — page content and structure
-- `styles.css` — design system, themes, and responsive layout
-- `script.js` — navigation, reveal animations, theme switching, project modal, gallery modal, active navigation, and email copy function
-- `assets/` — profile photo, favicon, and project screenshots
+- `index.html` — page structure and content
+- `styles.css` — themes and responsive layout
+- `script.js` — navigation, animations, theme switching, modals, and email copy
+- `assets/` — profile photo and project screenshots
 
-## Dashboard Gallery
+## CV download
 
-The **Production & Leader Dashboard Gallery** presents nine interfaces: the internal operations hub, Clone Scanner SSD/NVMe, public production monitoring, repair, PPIC in-transit material, production analysis, IPQC, detailed findings, and OQC. Screenshots containing sensitive operational data have been anonymized for public portfolio use.
+The website includes `assets/Abdul-Kholik-CV.pdf`, linked from the navigation, hero section, and contact section. The professional contact email used across the website is `abdulkholikk045@gmail.com`.
