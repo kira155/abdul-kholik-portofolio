@@ -6,10 +6,13 @@ A concise, responsive portfolio for a Staff Process Engineer focused on process 
 
 - Profile
 - What I Deliver
+- On the Shop Floor — real photos from an October 2026 production-tools briefing, with a responsive gallery and photo lightbox (keyboard arrows, touch swipe)
 - Featured Projects
 - Career Journey
 - Tools & Expertise
 - Contact
+
+All five briefing images are optimized locally in `assets/field-notes/` as WebP. The professional portrait remains unchanged. The portfolio does not rely on a server/database or external asset CDN.
 
 The project archive is collapsed by default so the main page stays focused while additional manufacturing dashboards remain available.
 
@@ -40,4 +43,4 @@ Then open `http://localhost:8000`.
 
 ## CV download
 
-The website includes `assets/Abdul-Kholik-CV.pdf`, linked from the navigation, hero section, and contact section. The professional contact email used across the website is `abdulkholikk045@gmail.com`.
+The website includes `assets/Abdul-Kholik-CV.pdf`, linked from the navigation, hero section, and contact section. The professional contact email used across the website is `abdulkholikk953@gmail.com`.

@@ -71,10 +71,17 @@ const galleryModalElements = {
   image: document.getElementById("galleryImage"),
   tag: document.getElementById("galleryTag"),
   title: document.getElementById("galleryTitle"),
-  description: document.getElementById("galleryDescription")
+  description: document.getElementById("galleryDescription"),
+  context: document.getElementById("galleryContext")
 };
 
 let lastFocusedElement = null;
+const fieldPhotos = [...document.querySelectorAll("[data-field-photo]")];
+const lightboxControls = document.getElementById("fieldworkLightboxControls");
+const lightboxCount = document.getElementById("fieldworkLightboxCount");
+const lightboxPrevious = document.getElementById("fieldworkPrevious");
+const lightboxNext = document.getElementById("fieldworkNext");
+let activeFieldPhoto = -1;
 
 function updateScrollUI() {
   const scrollTop = window.scrollY;
@@ -205,13 +212,28 @@ function closeProjectModal() {
   if (lastFocusedElement) lastFocusedElement.focus();
 }
 
-function openGalleryModal(button) {
-  lastFocusedElement = button;
+function fillGalleryModal(button) {
   galleryModalElements.image.src = button.dataset.image;
-  galleryModalElements.image.alt = button.dataset.title;
+  galleryModalElements.image.alt = button.querySelector("img")?.alt || button.dataset.title;
   galleryModalElements.tag.textContent = button.dataset.tag;
+  galleryModalElements.context.textContent = button.dataset.context || "Manufacturing System";
   galleryModalElements.title.textContent = button.dataset.title;
   galleryModalElements.description.textContent = button.dataset.desc;
+}
+
+function showFieldPhoto(index) {
+  if (!fieldPhotos.length) return;
+  activeFieldPhoto = (index + fieldPhotos.length) % fieldPhotos.length;
+  fillGalleryModal(fieldPhotos[activeFieldPhoto]);
+  lightboxCount.textContent = `${String(activeFieldPhoto + 1).padStart(2, "0")} / ${String(fieldPhotos.length).padStart(2, "0")}`;
+}
+
+function openGalleryModal(button) {
+  lastFocusedElement = button;
+  activeFieldPhoto = fieldPhotos.indexOf(button);
+  lightboxControls.hidden = activeFieldPhoto === -1;
+  if (activeFieldPhoto === -1) fillGalleryModal(button);
+  else showFieldPhoto(activeFieldPhoto);
 
   galleryModal.classList.add("open");
   galleryModal.setAttribute("aria-hidden", "false");
@@ -219,8 +241,24 @@ function openGalleryModal(button) {
   galleryModal.querySelector(".modal-close").focus();
 }
 
+lightboxPrevious.addEventListener("click", () => showFieldPhoto(activeFieldPhoto - 1));
+lightboxNext.addEventListener("click", () => showFieldPhoto(activeFieldPhoto + 1));
+
+let galleryTouchStart = null;
+galleryModalElements.image.addEventListener("touchstart", (event) => {
+  galleryTouchStart = event.changedTouches[0]?.clientX ?? null;
+}, { passive: true });
+galleryModalElements.image.addEventListener("touchend", (event) => {
+  if (activeFieldPhoto === -1 || galleryTouchStart === null) return;
+  const delta = (event.changedTouches[0]?.clientX ?? galleryTouchStart) - galleryTouchStart;
+  if (Math.abs(delta) > 45) showFieldPhoto(activeFieldPhoto + (delta < 0 ? 1 : -1));
+  galleryTouchStart = null;
+}, { passive: true });
+
 function closeGalleryModal() {
+  if (!galleryModal.classList.contains("open")) return;
   galleryModal.classList.remove("open");
+  activeFieldPhoto = -1;
   galleryModal.setAttribute("aria-hidden", "true");
   if (!projectModal.classList.contains("open")) {
     document.body.classList.remove("modal-open");
@@ -249,6 +287,10 @@ document.addEventListener("keydown", (event) => {
     closeMobileMenu();
     if (galleryModal.classList.contains("open")) closeGalleryModal();
     else if (projectModal.classList.contains("open")) closeProjectModal();
+  }
+  if (galleryModal.classList.contains("open") && activeFieldPhoto !== -1) {
+    if (event.key === "ArrowRight") { event.preventDefault(); showFieldPhoto(activeFieldPhoto + 1); }
+    if (event.key === "ArrowLeft") { event.preventDefault(); showFieldPhoto(activeFieldPhoto - 1); }
   }
 
   const activeModal = getOpenModal();
