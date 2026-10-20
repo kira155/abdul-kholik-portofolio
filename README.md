@@ -44,3 +44,11 @@ Then open `http://localhost:8000`.
 ## CV download
 
 The website includes `assets/Abdul-Kholik-CV.pdf`, linked from the navigation, hero section, and contact section. The professional contact email used across the website is `abdulkholikk953@gmail.com`.
+
+
+## Newly added case studies (October 2026)
+
+- **Andon Call — Smart Response System:** Android interface for priority support calls between production, IPQC, PE and OQC, including receiver view and high-priority overlay.
+- **Portal Karyawan — Workforce Management:** Internal portal for attendance, overtime workflow, surat SP, skill matrix, supervisor views and role-based access. All operational values, employee identities and credentials shown in the *public* screenshots have been removed.
+
+The public portfolio includes only the already-redacted assets in `assets/projects/new/`. The original internal screenshots are deliberately excluded from the distribution archive.

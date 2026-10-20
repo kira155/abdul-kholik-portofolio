@@ -42,6 +42,28 @@ const projectData = {
     impact: "Improved stock visibility and transaction traceability.",
     stack: ["PHP", "MySQL", "JavaScript", "Inventory System"]
   },
+  "andon-call": {
+    category: "Smart Factory / Mobile Applications",
+    year: "2026",
+    title: "Andon Call — Smart Response System",
+    image: "assets/projects/new/andon-call-overview.webp",
+    summary: "Android application helping production teams request and coordinate faster cross-functional assistance.",
+    challenge: "Production-line issues require clear escalation to the right support teams without losing the context of the request.",
+    solution: "Designed a team-based call workflow for IPQC, PE, and OQC, with priority overlays, call receipt, status visibility, and receiver history.",
+    impact: "Provides a clear, trackable communication workflow for requests from the shop floor; quantified time savings have not been publicly established.",
+    stack: ["Android", "Manufacturing Workflow", "Priority Alerts", "Team Coordination"]
+  },
+  "employee-portal": {
+    category: "Workforce Systems / Internal Web",
+    year: "2026",
+    title: "Portal Karyawan — Workforce Management",
+    image: "assets/projects/new/portal-dashboard-anonymized.webp",
+    summary: "Role-based employee portal for attendance, overtime requests, disciplinary letters, skill matrices, and supervisor workflows.",
+    challenge: "Employee-related activities and approval processes are easier to manage when they use consistent records and role-based interfaces.",
+    solution: "Brought attendance, overtime submission and approval, surat SP, skill matrix, employee information, and supervisor views into a connected internal portal.",
+    impact: "Simplifies navigation and status follow-up across HR/production workflows. Public screenshots deliberately hide employee identities and real counts.",
+    stack: ["Internal Web Application", "Role-based Access", "Attendance", "Approvals", "Skill Matrix"]
+  },
   "clone-scanner": {
     category: "Production Automation",
     year: "2026",

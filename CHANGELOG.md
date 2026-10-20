@@ -18,3 +18,9 @@ Copy the folder contents to the root of your portfolio website or GitHub Pages r
 ## Verification
 
 HTML image paths and JavaScript syntax checked; simulated browser interactions tested at desktop and phone breakpoints (320, 390, 768, 1024, and 1440 pixels).
+
+
+## October 20, 2026 — Andon Call & Portal Karyawan
+- Added two prominent project cards and in-depth case studies for Andon Call and Portal Karyawan.
+- Added six illustrative app screenshots. Employee data, statistics, credentials, operational dates and line identifiers are masked in public Portal Karyawan images.
+- Added interactive lightbox previews and responsive layouts.

@@ -2963,3 +2963,41 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .fieldwork-gallery { scroll-behavior: auto; }
 }
+
+
+/* 2026 - Two featured systems: Andon Call and Employee Portal */
+.featured-new-head { display:flex;justify-content:space-between;gap:24px;align-items:end;margin:50px 0 19px;}
+.featured-new-head p {max-width:560px;color:var(--muted);font-size:13px;line-height:1.7;margin:0;}
+.new-project-label {display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.12em;font-weight:850;color:var(--text);white-space:nowrap;}
+.new-project-dot {width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--accent-soft);}
+.spotlight-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px;margin-bottom:16px;}
+.spotlight-card {border:1px solid var(--line);border-radius:25px;overflow:hidden;background:var(--surface);transition:transform .25s ease,border-color .25s ease;}
+.spotlight-card:hover {border-color:var(--line-strong);transform:translateY(-4px);}
+.spotlight-image {height:285px;position:relative;overflow:hidden;background:#101a2e;display:flex;justify-content:center;align-items:center;}
+.spotlight-image:after {content:'';position:absolute;inset:65% 0 0;background:linear-gradient(transparent,rgba(11,17,32,.4));pointer-events:none;}
+.spotlight-image img {width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s ease;}
+.spotlight-portal .spotlight-image img {object-fit:contain;object-position:center;background:#eff3f9;}
+.spotlight-card:hover .spotlight-image img {transform:scale(1.035);}
+.spotlight-image-badge {position:absolute;left:20px;top:18px;z-index:1;color:#fff;background:#121a30db;backdrop-filter:blur(12px);border:1px solid #ffffff3a;border-radius:40px;padding:8px 12px;font-weight:800;font-size:10px;letter-spacing:.08em;}
+.spotlight-body {padding:26px 27px 28px;}
+.spotlight-body h3 {font-size:clamp(25px,2.5vw,34px);letter-spacing:-.04em;line-height:1.13;margin:14px 0;}
+.spotlight-body h3 span {font-weight:520;color:var(--muted);}
+.spotlight-body > p:not(.privacy-caption) {font-size:14px;line-height:1.78;color:var(--muted);min-height:76px;}
+.spotlight-feature-list {display:flex;gap:8px;flex-wrap:wrap;margin:21px 0;}
+.spotlight-feature-list span {border:1px solid var(--line);border-radius:99px;padding:7px 10px;background:var(--surface-solid);font-size:10px;color:var(--muted);font-weight:700;}
+.spotlight-actions {display:flex;align-items:center;flex-wrap:wrap;gap:19px;margin-top:16px;}
+.spotlight-secondary {border:0;padding:8px 0;cursor:pointer;font-size:12px;font-weight:750;color:var(--muted);background:transparent;}
+.spotlight-secondary:hover {color:var(--primary);}
+.privacy-caption {margin:18px 0 0;color:var(--muted);opacity:.84;font-size:11px;line-height:1.6;}
+.spotlight-screen-strip {border:1px solid var(--line);border-radius:22px;background:var(--surface);margin-bottom:31px;padding:19px 22px 21px;}
+.screen-strip-head {display:flex;justify-content:space-between;align-items:center;margin:0 0 14px;}
+.screen-strip-head strong {font-size:13px;}
+.screen-strip-head span {font-size:11px;color:var(--muted);}
+.screen-strip-items {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;}
+.screen-shot {display:flex;flex-direction:column;gap:9px;text-align:left;background:var(--surface-solid);border:1px solid var(--line);border-radius:14px;padding:8px;cursor:pointer;color:var(--text);min-width:0;}
+.screen-shot:hover {border-color:var(--line-strong);}
+.screen-shot img {width:100%;height:105px;object-fit:contain;background:#101a27;border-radius:9px;}
+.screen-shot:nth-child(n+3) img {background:#eff2f9;}
+.screen-shot span {display:block;padding:0 4px 2px;font-size:11px;font-weight:700;}
+@media(max-width:920px){.featured-new-head{display:block}.featured-new-head p{margin-top:13px}.spotlight-grid{grid-template-columns:1fr}.spotlight-image{height:320px}.spotlight-body>p:not(.privacy-caption){min-height:0}}
+@media(max-width:600px){.spotlight-image{height:205px}.spotlight-body{padding:21px}.spotlight-body h3{font-size:26px}.spotlight-screen-strip{padding:16px}.screen-strip-items{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.screen-shot img{height:98px}}
